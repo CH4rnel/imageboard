@@ -1,0 +1,11 @@
+version: "2"
+
+sql:
+  - engine: "postgresql"
+    schema: "../../organism_mutation"
+    queries: "./sqlc_queries"
+    gen:
+      go:
+        package: "db"
+        out: "./generated"
+        sql_package: "pgx/v5"
